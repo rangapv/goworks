@@ -1,6 +1,24 @@
 #!/bin/bash
 #rangapv@yahoo.com 27-02-2023
 
+
+gocheck () {
+
+goc1=`which go`
+goc1s="$?"
+goc2=`go version`
+goc2s="$?"
+
+if [[ ($goc1s -eq 0) && ($goc2s -eq 0) ]]
+then
+	echo "Current `(go version)` in this system"
+else
+	`source <(curl -s https://raw.githubusercontent.com/rangapv/goi/master/goi.sh)`
+fi
+
+}
+
+
 makfile () {
 
 imp="$1"
@@ -18,6 +36,8 @@ echo " fmt.Println(\"Hello, World!\")"
 echo "}"
 
 }
+
+gocheck
 
 echo " THis is a go skeletal program generator"
 echo " Enter the Module name (a.k.a example/hello)"
