@@ -63,4 +63,4 @@ d1=`mkdir $HOME/$mod1`
 cd1=`cd $HOME/$mod1;go mod init $mod;touch "$mod1.go"`
 
 
-makfile fmt rpc
+makfile fmt
